@@ -6,10 +6,10 @@ let volumeNumber = document.getElementById("volume-number");
 let audioValue = document.getElementById("horn-sound");
 let volumeImage = document.getElementById("volume-image");
 let honkButton = document.getElementById("honk-btn");
-let radioAirHorn = document.getElementById("air-horn");
+let radioAirHorn = document.getElementById("radio-air-horn");
 let soundImage = document.getElementById("sound-image");
-let radioCarHorn = document.getElementById("car-horn");
-let radioPartyHorn = document.getElementById("party-horn");
+let radioCarHorn = document.getElementById("radio-car-horn");
+let radioPartyHorn = document.getElementById("radio-party-horn");
 let formPartyHorn = document.getElementById("party-horn-form");
 
 radioAirHorn.addEventListener("change", updateAirHorn);
