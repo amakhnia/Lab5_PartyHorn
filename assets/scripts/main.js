@@ -52,24 +52,27 @@ function updateVolumeImage() {
 }
 
 radioAirHorn.addEventListener("click", updateAirHorn);
+radioCarHorn.addEventListener("click", updateCarHorn);
+radioPartyHorn.addEventListener("click", updatePartyHorn);
+formPartyHorn.addEventListener("click", updatePlayMedia);
 function updateAirHorn(){
     soundImage.scr = "./assets/media/images/air-horn.svg";
     audioValue.scr = "./assets/media/audio/air-horn.mp3";
 }
 
-radioCarHorn.addEventListener("click", updateCarHorn);
+//radioCarHorn.addEventListener("click", updateCarHorn);
 function updateCarHorn(){
     soundImage.scr = "./assets/media/images/car.svg";
     audioValue.scr = "./assets/media/audio/car-horn.mp3";
 }
 
-radioPartyHorn.addEventListener("click", updatePartyHorn);
+//radioPartyHorn.addEventListener("click", updatePartyHorn);
 function updatePartyHorn(){
     soundImage.scr = "./assets/media/images/party-horn.svg";
     audioValue.scr = "./assets/media/audio/party-horn.mp3";
 }
 
-formPartyHorn.addEventListener("click", updatePlayMedia);
+//formPartyHorn.addEventListener("click", updatePlayMedia);
 function updatePlayMedia(v){
     v.preventDefault();
     audioValue.play();
