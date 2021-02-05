@@ -31,17 +31,17 @@ function updateVolumeImage() {
     //volume-level-3: 67-100
     if (volumeNumber.value >= 67){
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
-        honkButton.disabled = false;
+        
     }
     //volume-level-2: 34-66
     else if (volumeNumber.value >= 34 && volumeNumber.value <= 66){
         volumeImage.src = "./assets/media/icons/volume-level-2.svg";
-        honkButton.disabled = false;
+        
     }
     //volume-level-1: 1-33
     else if (volumeNumber.value >= 1 && volumeNumber.value <= 33){
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
-        honkButton.disabled = false;
+        
     }
     //volume-level-0: 0
     else if (volumeNumber.value == 0){
@@ -51,25 +51,25 @@ function updateVolumeImage() {
 
 }
 
-radioAirHorn.addEventListener("change", updateAirHorn);
+radioAirHorn.addEventListener("click", updateAirHorn);
 function updateAirHorn(){
     soundImage.scr = "./assets/media/images/air-horn.svg";
     audioValue.scr = "./assets/media/audio/air-horn.mp3";
 }
 
-radioCarHorn.addEventListener("change", updateCarHorn);
+radioCarHorn.addEventListener("click", updateCarHorn);
 function updateCarHorn(){
     soundImage.scr = "./assets/media/images/car.svg";
     audioValue.scr = "./assets/media/audio/car-horn.mp3";
 }
 
-radioPartyHorn.addEventListener("change", updatePartyHorn);
+radioPartyHorn.addEventListener("click", updatePartyHorn);
 function updatePartyHorn(){
     soundImage.scr = "./assets/media/images/party-horn.svg";
     audioValue.scr = "./assets/media/audio/party-horn.mp3";
 }
 
-formPartyHorn.addEventListener("submit", updatePlayMedia);
+formPartyHorn.addEventListener("click", updatePlayMedia);
 function updatePlayMedia(v){
     v.preventDefault();
     audioValue.play();
