@@ -69,7 +69,7 @@ function updatePartyHorn(){
     audioValue.scr = "./assets/media/audio/party-horn.mp3";
 }
 
-
+formPartyHorn.addEventListener("submit", updatePlayMedia);
 function updatePlayMedia(v){
     v.preventDefault();
     audioValue.play();
