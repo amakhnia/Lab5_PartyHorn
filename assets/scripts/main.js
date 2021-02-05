@@ -12,10 +12,6 @@ let radioCarHorn = document.getElementById("car-horn");
 let radioPartyHorn = document.getElementById("party-horn");
 let formPartyHorn = document.getElementById("party-horn-form");
 
-function updatePlayMedia(v){
-    v.preventDefault();
-    audioValue.play();
-}
 
 volumeSlider.addEventListener("input", updateVolumeNumber);
 function updateVolumeSlider(){
@@ -63,7 +59,7 @@ function updateAirHorn(){
 
 radioCarHorn.addEventListener("change", updateCarHorn);
 function updateCarHorn(){
-    soundImage.scr = "./assets/media/images/car-horn.svg";
+    soundImage.scr = "./assets/media/images/car.svg";
     audioValue.scr = "./assets/media/audio/car-horn.mp3";
 }
 
@@ -74,3 +70,7 @@ function updatePartyHorn(){
 }
 
 
+function updatePlayMedia(v){
+    v.preventDefault();
+    audioValue.play();
+}
