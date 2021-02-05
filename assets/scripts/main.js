@@ -3,9 +3,9 @@
 // TODO
 
 function updateVolumeSlider(){
-    let volumeSlider = document.getElementById("volume-slider");
-    let volumeNumber = document.getElementById("volume-number");
-    let audioValue = document.getElementById("horn-sound");
+    var volumeSlider = document.getElementById("volume-slider");
+    var volumeNumber = document.getElementById("volume-number");
+    var audioValue = document.getElementById("horn-sound");
     volumeSlider.addEventListener("input", updateVolumeNumber);
     volumeSlider.value = volumeNumber.value;
     updateVolumeImage();
@@ -13,15 +13,15 @@ function updateVolumeSlider(){
 }
 
 function updateVolumeNumber(){
-    volumeSlider.addEventListener("input", updateVolumeNumber);
+    volumeNumber.addEventListener("input", updateVolumeSlider);
     volumeNumber.value = volumeSlider.value;
     updateVolumeImage();
     audioValue.volume = volumeNumber.value / 100;
 }
 
 function updateVolumeImage() {
-    let volumeImage = document.getElementById("volume-image");
-    let honkButton = document.getElementById("honk-button");
+    var volumeImage = document.getElementById("volume-image");
+    var honkButton = document.getElementById("honk-button");
     //volume-level-3: 67-100
     if (volumeNumber.value >= 67){
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
@@ -46,29 +46,29 @@ function updateVolumeImage() {
 }
 
 function updateAirHorn(){
-    let radioAirHorn = document.getElementById("air-horn");
-    let soundImage = document.getElementById("sound-image");
+    var radioAirHorn = document.getElementById("air-horn");
+    var soundImage = document.getElementById("sound-image");
     radioAirHorn.addEventListener("change", updateAirHorn);
     soundImage.scr = "./assets/media/images/air-horn.svg";
     audioValue.scr = "./assets/media/audio/air-horn.mp3";
 }
 
 function updateCarHorn(){
-    let radioCarHorn = document.getElementById("car-horn");
+    var radioCarHorn = document.getElementById("car-horn");
     radioCarHorn.addEventListener("change", updateCarHorn);
     soundImage.scr = "./assets/media/images/car-horn.svg";
     audioValue.scr = "./assets/media/audio/car-horn.mp3";
 }
 
 function updatePartyHorn(){
-    let radioPartyHorn = document.getElementById("party-horn");
+    var radioPartyHorn = document.getElementById("party-horn");
     radioPartyHorn.addEventListener("change", updatePartyHorn);
     soundImage.scr = "./assets/media/images/party-horn.svg";
     audioValue.scr = "./assets/media/audio/party-horn.mp3";
 }
 
 function updatePlayMedia(v){
-    let formPartyHorn = document.getElementById("party-horn-form");
+    var formPartyHorn = document.getElementById("party-horn-form");
     v.preventDefault();
     audioValue.play();
 }
