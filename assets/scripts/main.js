@@ -12,6 +12,9 @@ let radioCarHorn = document.getElementById("radio-car-horn");
 let radioPartyHorn = document.getElementById("radio-party-horn");
 let formPartyHorn = document.getElementById("party-horn-form");
 
+volumeSlider.addEventListener("input", updateVolumeNumber);
+volumeNumber.addEventListener("input", updateVolumeSlider);
+
 radioAirHorn.addEventListener("change", updateAirHorn);
 radioCarHorn.addEventListener("change", updateCarHorn);
 radioPartyHorn.addEventListener("change", updatePartyHorn);
@@ -20,14 +23,14 @@ honkButton.addEventListener("click", function(v){
     audioValue.play();
 });
 
-volumeSlider.addEventListener("input", updateVolumeNumber);
+//volumeSlider.addEventListener("input", updateVolumeNumber);
 function updateVolumeSlider(){
     volumeSlider.value = volumeNumber.value;
     updateVolumeImage();
     audioValue.volume = volumeSlider.value / 100;
 }
 
-volumeNumber.addEventListener("input", updateVolumeSlider);
+//volumeNumber.addEventListener("input", updateVolumeSlider);
 function updateVolumeNumber(){
     volumeNumber.value = volumeSlider.value;
     updateVolumeImage();
