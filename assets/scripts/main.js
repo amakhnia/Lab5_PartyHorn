@@ -1,8 +1,8 @@
 // main.js
 
 // TODO
-let volumeSlider = document.getElementById('volume-slider');
-let volumeNumber = document.getElementById('volume-number');
+//let volumeSlider = document.getElementById('volume-slider');
+//let volumeNumber = document.getElementById('volume-number');
 let audioValue = document.getElementById('horn-sound');
 let volumeImage = document.getElementById('volume-image');
 let honkButton = document.getElementById('honk-btn');
@@ -12,8 +12,8 @@ let radioCarHorn = document.getElementById('radio-car-horn');
 let radioPartyHorn = document.getElementById('radio-party-horn');
 let formPartyHorn = document.getElementById('party-horn-form');
 
-volumeSlider.addEventListener("input", updateVolumeNumber);
-volumeNumber.addEventListener("input", updateVolumeSlider);
+document.getElementById('volume-slider').addEventListener("input", updateVolumeNumber);
+document.getElementById('volume-number').addEventListener("input", updateVolumeSlider);
 
 radioAirHorn.addEventListener("click", updateAirHorn);
 radioCarHorn.addEventListener("clickt", updateCarHorn);
