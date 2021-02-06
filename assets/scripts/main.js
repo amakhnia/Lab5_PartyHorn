@@ -67,12 +67,14 @@ function updateAirHorn(){
     document.getElementById('sound-image').scr = "./assets/media/images/air-horn.svg";
     document.getElementById('horn-sound').scr = "./assets/media/audio/air-horn.mp3";
 }
+
 //updates horn sound and image
 
 function updateCarHorn(){
     document.getElementById('sound-image').scr = "./assets/media/images/car.svg";
     document.getElementById('horn-sound').scr = "./assets/media/audio/car-horn.mp3";
 }
+
 //updates horn sound and image
 
 function updatePartyHorn(){
