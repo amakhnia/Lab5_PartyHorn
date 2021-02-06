@@ -16,7 +16,7 @@ document.getElementById('volume-slider').addEventListener("input", updateVolumeN
 document.getElementById('volume-number').addEventListener("input", updateVolumeSlider);
 
 radioAirHorn.addEventListener("click", updateAirHorn);
-radioCarHorn.addEventListener("clickt", updateCarHorn);
+radioCarHorn.addEventListener("click", updateCarHorn);
 radioPartyHorn.addEventListener("click", updatePartyHorn);
 honkButton.addEventListener("click", function(v){
     v.preventDefault();
@@ -38,22 +38,21 @@ function updateVolumeNumber(){
 }
 
 function updateVolumeImage() {
-    
-    /*if (volumeNumber != 0){
-        honkButton.disabled = false;
-    }*/
 
     //volume-level-3: 67-100
-    else if (volumeNumber.value >= 67){
+    if (volumeNumber.value >= 67){
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
+        honkButton.disabled = false;
     }
     //volume-level-2: 34-66
     else if (volumeNumber.value >= 34 && volumeNumber.value <= 66){
         volumeImage.src = "./assets/media/icons/volume-level-2.svg";
+        honkButton.disabled = false;
     }
     //volume-level-1: 1-33
     else if (volumeNumber.value >= 1 && volumeNumber.value <= 33){
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
+        honkButton.disabled = false;
     }
     //volume-level-0: 0
     else if (volumeNumber.value == 0){
@@ -62,18 +61,18 @@ function updateVolumeImage() {
     }
 
 }
-
+//updates horn sound and image
 function updateAirHorn(){
     soundImage.scr = "./assets/media/images/air-horn.svg";
     audioValue.scr = "./assets/media/audio/air-horn.mp3";
 }
-
+//updates horn sound and image
 //radioCarHorn.addEventListener("change", updateCarHorn);
 function updateCarHorn(){
     soundImage.scr = "./assets/media/images/car.svg";
     audioValue.scr = "./assets/media/audio/car-horn.mp3";
 }
-
+//updates horn sound and image
 //radioPartyHorn.addEventListener("change", updatePartyHorn);
 function updatePartyHorn(){
     soundImage.scr = "./assets/media/images/party-horn.svg";
