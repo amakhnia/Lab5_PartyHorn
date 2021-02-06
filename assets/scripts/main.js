@@ -15,9 +15,9 @@ let formPartyHorn = document.getElementById("party-horn-form");
 volumeSlider.addEventListener("input", updateVolumeNumber);
 volumeNumber.addEventListener("input", updateVolumeSlider);
 
-radioAirHorn.addEventListener("change", updateAirHorn);
-radioCarHorn.addEventListener("change", updateCarHorn);
-radioPartyHorn.addEventListener("change", updatePartyHorn);
+radioAirHorn.addEventListener("input", updateAirHorn);
+radioCarHorn.addEventListener("input", updateCarHorn);
+radioPartyHorn.addEventListener("input", updatePartyHorn);
 honkButton.addEventListener("click", function(v){
     v.preventDefault();
     audioValue.play();
@@ -43,7 +43,7 @@ function updateVolumeImage() {
     }
 
     //volume-level-3: 67-100
-    if (volumeNumber.value >= 67){
+    else if (volumeNumber.value >= 67){
         volumeImage.src = "./assets/media/icons/volume-level-3.svg";
     }
     //volume-level-2: 34-66
@@ -55,7 +55,7 @@ function updateVolumeImage() {
         volumeImage.src = "./assets/media/icons/volume-level-1.svg";
     }
     //volume-level-0: 0
-    else (volumeNumber.value == 0){
+    else if (volumeNumber.value == 0){
         volumeImage.src = "./assets/media/icons/volume-level-0.svg";
         honkButton.disabled = true;
     }
