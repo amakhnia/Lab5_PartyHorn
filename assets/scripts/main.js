@@ -1,19 +1,7 @@
 // main.js
 
 // TODO
-/*
-let audioValue = document.getElementById('horn-sound');
-let radioAirHorn = document.getElementById('radio-air-horn');
-let radioPartyHorn = document.getElementById('radio-party-horn');
-
-let volumeImage = document.getElementById('volume-image');
-let honkButton = document.getElementById('honk-btn');
-
-let soundImage = document.getElementById('sound-image');
-let radioCarHorn = document.getElementById('radio-car-horn');
-let radioPartyHorn = document.getElementById('radio-party-horn');
 let formPartyHorn = document.getElementById('party-horn-form');
-*/
 
 document.getElementById('honk-btn').addEventListener("click", function(v){
     v.preventDefault();
