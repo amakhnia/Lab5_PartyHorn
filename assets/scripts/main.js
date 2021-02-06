@@ -66,7 +66,7 @@ function updateCarHorn(){
 //updates horn sound and image
 
 function updatePartyHorn(){
-    document.getElementById('radio-party-horn').scr = "./assets/media/audio/party-horn.mp3";
+    document.getElementById('horn-sound').scr = "./assets/media/audio/party-horn.mp3";
     document.getElementById('sound-image').scr = "./assets/media/images/party-horn.svg";
 }
 
