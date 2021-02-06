@@ -15,7 +15,7 @@ let radioPartyHorn = document.getElementById('radio-party-horn');
 let formPartyHorn = document.getElementById('party-horn-form');
 */
 
-honkButton.addEventListener("click", function(v){
+document.getElementById('honk-btn').addEventListener("click", function(v){
     v.preventDefault();
     document.getElementById('horn-sound').play();
 });
