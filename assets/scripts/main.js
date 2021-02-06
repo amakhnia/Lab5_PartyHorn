@@ -60,18 +60,21 @@ function updateVolumeImage() {
 }
 //updates horn sound and image
 document.getElementById('radio-air-horn').addEventListener("click", updateAirHorn);
+document.getElementById('radio-car-horn').addEventListener("click", updateCarHorn);
+document.getElementById('radio-party-horn').addEventListener("click", updatePartyHorn);
+
 function updateAirHorn(){
     document.getElementById('sound-image').scr = "./assets/media/images/air-horn.svg";
     document.getElementById('horn-sound').scr = "./assets/media/audio/air-horn.mp3";
 }
 //updates horn sound and image
-document.getElementById('radio-car-horn').addEventListener("click", updateCarHorn);
+
 function updateCarHorn(){
     document.getElementById('sound-image').scr = "./assets/media/images/car.svg";
     document.getElementById('horn-sound').scr = "./assets/media/audio/car-horn.mp3";
 }
 //updates horn sound and image
-document.getElementById('radio-party-horn').addEventListener("click", updatePartyHorn);
+
 function updatePartyHorn(){
     document.getElementById('sound-image').scr = "./assets/media/images/party-horn.svg";
     document.getElementById('horn-sound').scr = "./assets/media/audio/party-horn.mp3";
