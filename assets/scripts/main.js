@@ -3,8 +3,8 @@
 // TODO
 let formPartyHorn = document.getElementById('party-horn-form');
 
-document.getElementById('honk-btn').addEventListener("click", function(v){
-    v.preventDefault();
+document.getElementById('honk-btn').addEventListener("click", function(event){
+    event.preventDefault();
     document.getElementById('horn-sound').play();
 });
 
